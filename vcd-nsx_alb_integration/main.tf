@@ -94,9 +94,6 @@ resource "nsxt_policy_segment" "alb_se" {
   subnet {
     cidr        = "${cidrhost(var.alb_se_cidr, 1)}/${split("/", var.alb_se_cidr)[1]}"
     dhcp_ranges = ["${cidrhost(var.alb_se_cidr, 10)}-${cidrhost(var.alb_se_cidr, 100)}"]
-    #dhcp_v4_config {
-    #  dns_servers = ["192.168.222.70"]
-    #}
   }
 }
 
@@ -229,7 +226,7 @@ resource "vcd_nsxt_alb_cloud" "nsx" {
   network_pool_id     = data.vcd_nsxt_alb_importable_cloud.nsx.network_pool_id
 }
 
-# Import Service Enginge Group as Shared SEG
+# Import Service Engine Group as Shared SEG
 resource "vcd_nsxt_alb_service_engine_group" "sseg_01" {
   name                                 = "${split(".", var.nsx_manager)[0]}-seg-01"
   alb_cloud_id                         = vcd_nsxt_alb_cloud.nsx.id
