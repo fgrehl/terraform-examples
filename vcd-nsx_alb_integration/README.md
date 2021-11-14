@@ -1,9 +1,10 @@
 # NSX-T Advanced Load Balancer Integation in VMware Cloud Director
 Terraform manifest to integrate NSX-ALB in Cloud Director.
-
-See this article for prerequisites and manual steps: https://www.virten.net/2021/10/getting-started-with-nsx-advanced-load-balancer-integration-in-vmware-cloud-director-10-3/
+Reference: https://www.virten.net/2021/11/nsx-alb-integration-in-vmware-cloud-director-10-3-with-terraform/
 
 ## Prerequisites
+See this article for prerequisites and manual steps: https://www.virten.net/2021/10/getting-started-with-nsx-advanced-load-balancer-integration-in-vmware-cloud-director-10-3/
+
 - vCenter, ESX, Cloud Director and NSX-T installed and configured.
 - NSX-T: Tier-0 Gateway configured with any kind of external connection.
 - Cloud Director: Network Pool, Tier-0 Gateway (External Network) and Provider VDC ready to host tenants.
